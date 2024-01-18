@@ -9,7 +9,6 @@ function App() {
   ];
   return (
     <>
-      <h1>Sample School</h1>
       <ul>
         {items.map((item, index) => (
           <li>
