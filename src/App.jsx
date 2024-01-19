@@ -1,23 +1,16 @@
 import { useState } from "react";
 import "./App.css";
+import Header from "./components/Header";
+import FeedbackItem from "./components/FeedbackItem";
 
-function App() {
-  const items = [
-    { id: 1, text: "item one", cost: "10" },
-    { id: 2, text: "item two", cost: "5" },
-    { id: 3, text: "item three", cost: "3.50" },
-  ];
+export default function App(){
   return (
     <>
-      <ul>
-        {items.map((item, index) => (
-          <li>
-            {item.text} ${item.cost}
-          </li>
-        ))}
-      </ul>
+      <Header text="Sample School" />
+      <FeedbackItem />
+      <FeedbackItem />
+      <FeedbackItem />
+      <FeedbackItem />
     </>
   );
 }
-
-export default App;
