@@ -9,7 +9,7 @@ const FeedbackData =
         id: 2,
         rating: 5, 
         text: 'Molar simpu rolod',
-        }
+        },
         {
         id: 3,
         rating: 2, 
