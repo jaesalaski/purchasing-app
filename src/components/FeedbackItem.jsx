@@ -1,25 +1,12 @@
-import {useState} from 'react'
+import Card from "./shared/Card"
 
-export default function FeedbackItem() {
-    const [count, setCount] = useState(0)
-    const [text, setText] = useState('Item that a school would purchase')
-
-    const handleClick = () => {
-        setCount((oldCount) => {
-            return oldCount + 1
-        })
-    }
-
-    const clearCart = () => {
-        setCount(0)
-    }
-
+function FeedbackItem({item}) {
     return (
-        <div className='card'>
-            <div className='num-display'>{count}</div>
-            <div className='text-display'>{text}</div>
-            <button onClick={handleClick}>Add to Cart</button>  
-            <button onClick={clearCart}>Clear Cart</button>
-        </div>
+        <Card reverse={true}>
+            <div className='num-display'>{item.rating}</div>
+            <div className='text-display'>{item.text}</div>
+        </Card>
     )
 }
+
+export default FeedbackItem
